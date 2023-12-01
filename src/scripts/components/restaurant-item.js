@@ -13,7 +13,6 @@ class RestaurantItem extends HTMLElement {
   }
 
   render() {
-    this.tabIndex = 2;
     this.ariaLabel = `${this._data.name}, ${this._data.city}, with rating ${this._data.rating} per 5.`;
     this.innerHTML = `
             <p class="kota">${this._data.city}</p>
