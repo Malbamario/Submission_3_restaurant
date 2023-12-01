@@ -3,8 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const { default: ImageminWebpackPlugin } = require('imagemin-webpack-plugin');
-const imageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -67,13 +66,16 @@ module.exports = {
         },
       ],
     }),
-    new ImageminWebpackPlugin({
-      plugins: [
-        imageminMozjpeg({
-          quality: 50,
-          progressive: true,
-        }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50,
+          },
+        },
       ],
+      overrideExtension: true,
     }),
     process.env.NODE_ENV === 'production' && new BundleAnalyzerPlugin({
       analyzerMode: 'static',

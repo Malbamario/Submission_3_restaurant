@@ -1,4 +1,3 @@
-import { fetch } from 'fetch-h2';
 import API_ENDPOINT from '../globals/api-endpoint';
 
 class RestaurantDbSource {

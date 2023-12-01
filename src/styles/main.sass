@@ -95,9 +95,9 @@ hero-element
     align-items: stretch
     min-height: 380px
     width: 100%
-    background-image: url("./../public/hero-image-small.png")
-    background-image: -webkit-image-set("./../public/hero-image-small.png" 1x, "./../public/hero-image.jpg" 2x)
-    background-image: image-set("./../public/hero-image-small.png" 1x, "./../public/hero-image.jpg" 2x)
+    background-image: url("./../public/hero-image-small.webp")
+    background-image: -webkit-image-set("./../public/hero-image-small.webp" 1x, "./../public/hero-image.webp" 2x)
+    background-image: image-set("./../public/hero-image-small.webp" 1x, "./../public/hero-image.webp" 2x)
     background-position: center
     background-color: $darkColor
     object-fit: cover
@@ -308,12 +308,11 @@ footer
 #restaurant-img 
     grid-column-start: 1
     grid-column-end: 3
-    padding: 0
-    margin: 0 auto
-    width: 100%
-    height: auto
-    object-fit: cover
-    aspect-ratio: 2.35 / 1
+    img 
+        padding: 0
+        width: 100%
+        object-fit: cover
+        aspect-ratio: 2.35 / 1
 
 #box3 
     grid-column-start: 3

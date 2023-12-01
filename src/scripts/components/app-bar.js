@@ -8,7 +8,11 @@ class AppBar extends HTMLElement {
         <a href="#" id="skip-to-content" tabindex="0">Skip To Content</a>
         <nav>
             <div class="title">
-                <img class="lazyload" src="./app-icon.png" alt="Malba Culinary Icon">
+                <picture>
+                  <source type="image/webp" srcset="./app-icon.webp">
+                  <source type="image/png" srcset="./app-icon.png">
+                  <img class="lazyload" src="./app-icon.png" alt="Malba Culinary Icon">
+                </picture>
                 <h1>Malba Culinary</h1>
             </div>
             <button id="hamburger" tabindex="0" aria-label="Menu">☰</button>

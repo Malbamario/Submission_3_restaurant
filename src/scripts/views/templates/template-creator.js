@@ -5,6 +5,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div id="restaurantName" id="box1">
         <h1>${restaurant.name}</h1>
     </div>
+    <picture>
+              <source type="image/webp" srcset="${this._thumbnail}">
+              <source type="image/jpeg" srcset="${this._thumbnail}">
+              <img class="lazyload" src="${this._thumbnail}" alt="${this._data.name}">
+            </picture>
     <img class="lazyload" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}" alt="" id="restaurant-img" class="detail-card">
     <div id="box3">
         <div class="detail-card">
