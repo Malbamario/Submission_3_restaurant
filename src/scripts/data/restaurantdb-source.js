@@ -1,5 +1,5 @@
+import { fetch } from 'fetch-h2';
 import API_ENDPOINT from '../globals/api-endpoint';
-// import FavoriteRestaurantIdb from './favorite-restaurant-idb';
 
 class RestaurantDbSource {
   static async listAllResaturant() {
