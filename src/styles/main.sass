@@ -95,9 +95,12 @@ hero-element
     align-items: stretch
     min-height: 380px
     width: 100%
-    background-image: url("./../public/hero-image.jpg")
+    background-image: url("./../public/hero-image-small.png")
+    background-image: -webkit-image-set("./../public/hero-image-small.png" 1x, "./../public/hero-image.jpg" 2x)
+    background-image: image-set("./../public/hero-image-small.png" 1x, "./../public/hero-image.jpg" 2x)
     background-position: center
     background-color: $darkColor
+    object-fit: cover
     max-width: 1440px
     margin: auto
 

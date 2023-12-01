@@ -5,7 +5,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div id="restaurantName" id="box1">
         <h1>${restaurant.name}</h1>
     </div>
-    <img src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}" alt="" id="restaurant-img" class="detail-card">
+    <img class="lazyload" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}" alt="" id="restaurant-img" class="detail-card">
     <div id="box3">
         <div class="detail-card">
             <i class="fa fa-location-dot" aria-hidden="true"></i>
