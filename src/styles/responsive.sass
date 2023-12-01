@@ -1,0 +1,109 @@
+@import "main.sass"
+
+@media screen and (max-width: 450px) 
+    #restaurant-img
+        aspect-ratio: 4/3
+
+@media screen and (min-width: 451px) 
+    restaurant-item img 
+        height: 16em
+
+@media screen and (max-width: 567px) 
+    
+    #hamburger 
+        align-self: center
+        font-size: 1.5em
+        text-decoration: none
+        text-align: center
+        color: black
+        line-height: 44px
+        min-width: 44px
+        background-color: rgba(0, 0, 0, 0)
+        border: none
+
+    nav 
+        padding: 0.5em 1em
+
+    .nav__list 
+        display: none
+        position: absolute
+        width: 100%
+        padding: 0
+        margin: 0
+        background-color: $whiteColor
+        max-width: 100%
+        list-style-type: none
+        z-index: 1
+
+        &.open 
+            display: block
+            transform: translate(-1em, 52px)
+            transition: transform 0.3s ease-in-out
+
+        &.close 
+            display: block
+            transform: translate(-120%, 52px)
+            transition: transform 0.3s ease-in-out
+
+        li 
+            display: flex
+            flex-direction: column
+            justify-content: center
+            color: #000000
+            padding: 5px
+            text-decoration: none
+            min-height: 44px
+    
+            &:hover 
+                background-color: #616161
+        
+                a 
+                    color: $whiteColor
+
+@media screen and (min-width: 568px) 
+    #hamburger 
+        display: none
+
+@media screen and (max-width:623px) 
+    #box5,
+    #box6 
+        grid-column-start: 1
+        grid-column-end: 3
+
+@media screen and (min-width: 624px) 
+    restaurant-list ul 
+        grid-template-columns: repeat(2, 1fr)
+
+    #box5
+        grid-column-start: 1
+        grid-column-end: 2
+
+    #box6 
+        grid-column-start: 2
+        grid-column-end: 3
+
+@media screen and (max-width: 1000px) 
+    .wrapper 
+        grid-template-columns: repeat(2, 1fr)
+        max-width: 624px
+    
+    .wrapper error-message,
+    .wrapper loading-spinner,
+    #restaurantName,
+    #restaurant-img,
+    #box3,
+    #box4,
+    #box7 
+        grid-column-start: 1
+        grid-column-end: 3
+
+@media screen and (min-width: 1024px) 
+    restaurant-list ul 
+        grid-template-columns: repeat(3, 1fr)
+
+@media screen and (min-width: 1200px) 
+    restaurant-list 
+        padding: 3em 5em 1em 5em
+    
+        ul 
+            padding: 0

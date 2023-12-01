@@ -1,0 +1,60 @@
+{
+    "id": "restaurant-pw-s2-malba",
+    "start_url": "./index.html",
+    "name": "Malba Culinary",
+    "short_name": "Malba Culinary",
+    "description": "Find the home of your tounge",
+    "display": "standalone",
+    "background_color": "#393e46",
+    "theme_color": "#ffd369",
+    "icons": [
+        {
+            "src": "/icons/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-226x226.png",
+            "sizes": "226x226",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-300x300.png",
+            "sizes": "300x300",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}

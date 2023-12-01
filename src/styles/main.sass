@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100300400700&display=swap")
+@import "animate.sass"
+
+$darkColor: #222831
+$lightColor: #ffd369
+$greyColor: #393e46
+$whiteColor: #eeeeee
+$pinkColor: #da216e
+
+a,
+input,
+button,
+textarea 
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    min-width: 44px
+    min-height: 44px
+    line-height: 44px
+
+.hidden 
+    display: none
+
+#skip-to-content 
+    display: table-cell
+    position: absolute
+    top: -6em
+    padding: 0 1em 0 1em
+    margin: 1em
+    border-radius: 0.75em
+    text-decoration: none
+    vertical-align: middle
+    background-color: $whiteColor
+    color: $darkColor
+    z-index: 1
+
+    &:focus 
+        top: 0
+
+body 
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    margin: 0
+    background-color: $greyColor
+    width: 100%
+    font-family: Poppins, Arial, Helvetica, sans-serif
+
+h1 
+    margin: 0
+
+header 
+    min-height: 50px
+    background-color: $lightColor
+
+nav 
+    display: flex
+    position: relative
+    justify-content: space-between
+    padding: 0.5em 2em
+    max-width: 1440px
+    margin: auto
+
+    .title 
+        display: flex
+        align-items: center
+        gap: 1em
+        color: $darkColor
+
+    img 
+        height: 2em
+
+.nav__list 
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1em
+    padding: 0 0 0 1em
+    list-style-type: none
+    margin: 0
+
+    li 
+        text-align: center
+
+    li a 
+        text-decoration-line: none
+        text-transform: uppercase
+        color: $darkColor
+        display: inline-block
+        line-height: 44px
+        min-width: 44px
+        min-height: 44px
+
+hero-element 
+    display: flex
+    align-items: stretch
+    min-height: 380px
+    width: 100%
+    background-image: url("./../public/hero-image.jpg")
+    background-position: center
+    background-color: $darkColor
+    max-width: 1440px
+    margin: auto
+
+.overlay 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding: 0 1em
+    text-align: center
+    color: $whiteColor
+    background-image: linear-gradient(to right, $darkColor, rgba(255, 0, 0, 0), $darkColor)
+
+    p 
+        margin: 0
+
+main 
+    flex: 1
+
+error-message 
+    display: flex
+    margin: 0 1em 0 1em
+    padding: 1em 0.25em
+    font-weight: 300
+    text-align: center
+    color: $whiteColor
+    background-color: $darkColor
+    border-radius: 0.75em
+    box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.5)
+
+error-message h2
+    margin: auto
+
+.loader-container 
+    display: flex
+    width: 100%
+    justify-content: center
+
+.loader 
+    border: 16px solid #f3f3f3
+    border-radius: 50%
+    border-top: 16px solid black
+    width: 120px
+    height: 120px
+    animation: spin 2s linear infinite
+    -webkit-animation: spin 2s linear infinite
+
+restaurant-list 
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding: 3em 0 1em 0
+    margin: auto
+    max-width: 1440px
+
+    h1 
+        color: $whiteColor
+        text-shadow: $darkColor
+        margin: 0 0 0.25em 0
+
+    ul 
+        display: grid
+        gap: 1em
+        padding: 0 1em
+        list-style-type: none
+
+    a 
+        display: flex
+        text-decoration: none
+        color: $darkColor
+        line-height: 2em
+        height: 100%
+
+restaurant-item 
+    display: flex
+    flex-direction: column
+    position: relative
+    border-radius: 0.75em
+    background-color: $darkColor
+    text-align: start
+    box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.5)
+    width: 100%
+    height: 100%
+
+    .kota 
+        position: absolute
+        top: 1.5em
+        margin: 0
+        padding: 0em 0.7em
+        border-radius: 0 0.5em 0.5em 0
+        background-color: $lightColor
+        text-align: center
+        min-width: 3em
+
+    img 
+        width: 100%
+        height: 12em
+        object-fit: cover
+        border-radius: 0.75em 0.75em 0 0
+
+    .text 
+        padding: 1em
+
+        h2 
+            margin: 0
+            color: $lightColor
+
+        p 
+            color: #999999
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 5
+            line-clamp: 5
+            -webkit-box-orient: vertical
+
+.star-outer 
+    display: inline-block
+    position: relative
+    font-size: 1.3em
+    margin: 0 0 0.25em 0
+
+    &::before 
+        content: "\2605\2605\2605\2605\2605"
+        color: $greyColor
+
+.star-inner 
+    position: absolute
+    top: 0
+    left: 0
+    overflow: hidden
+
+    &::before 
+        content: "\2605\2605\2605\2605\2605"
+        color: $lightColor
+
+.favorite__label 
+    font-size: 50px
+    text-align: left
+
+footer 
+    display: flex
+    justify-content: center
+    padding: 0 2em
+    background-color: $lightColor
+    color: $darkColor
+    min-height: 50px
+
+    a 
+        color: $darkColor
+        display: inline-block
+        min-width: 44px
+        min-height: 44px
+    p 
+        color: $darkColor
+        margin: 0.5em 0
+        line-height: 44px
+
+/*Detail.css*/
+
+.wrapper 
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    padding: 2em
+    gap: 1.5em
+    max-width: 1440px
+    color: $whiteColor
+    margin:auto
+
+    error-message 
+        grid-column-start: 1
+        grid-column-end: 4
+
+    loading-spinner 
+        grid-column-start: 1
+        grid-column-end: 4
+
+.list-menu
+    display: flex
+    flex-direction: column
+    padding: 0
+    gap: 0.75em
+    color: $whiteColor
+
+.menu-item 
+    list-style: none
+    padding-bottom: 0.25em
+    margin: 0.5em 0.75em 0 0.75em
+    border:2px #616161
+    border-style: none none solid none
+
+.detail-card
+    padding: 1.25em
+    border-radius: 0.5em
+    background-color: $darkColor
+    box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.5)
+
+#restaurantName 
+    grid-column-start: 1
+    grid-column-end: 4
+    padding: 0
+    width: 100%
+    color: $lightColor
+
+#restaurant-img 
+    grid-column-start: 1
+    grid-column-end: 3
+    padding: 0
+    margin: 0 auto
+    width: 100%
+    height: auto
+    object-fit: cover
+    aspect-ratio: 2.35 / 1
+
+#box3 
+    grid-column-start: 3
+    grid-column-end: 4
+    padding: 0
+
+    .detail-card
+        display: flex
+        flex-direction: row
+        gap: 0.75em
+        align-items: center
+        padding: 1.25em
+        border-radius: 0.5em
+        background-color: $darkColor
+        box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.5)
+
+    p 
+        margin: 0
+        line-height: 1.25em
+
+    i 
+        color: $lightColor
+        line-height: 1.25em
+
+#box4 
+    grid-column-start: 1
+    grid-column-end: 3
+    width: auto
+    text-align: justify
+
+    h2
+        margin: 0
+        color: $lightColor
+
+    p
+        margin: 1em 0 0 0
+#box5 
+    grid-column-start: 1
+    grid-column-end: 2
+    padding:0
+
+#box6 
+    grid-column-start: 2
+    grid-column-end: 3
+    padding:0
+
+#box7 
+    grid-column-start: 1
+    grid-column-end: 3
+        
+h2.box
+    margin: 0
+    color: $lightColor
+
+#review-form
+    margin: 1em 0 0 0
+    display: flex
+    flex-direction: column
+    gap:1.25em
+
+    input
+        background-color: $greyColor
+        border: none
+        border-radius: 0.5em
+        padding: 0 1em 0 1em
+        color:$whiteColor
+        font-family: Poppins, Arial, Helvetica, sans-serif
+
+    button
+        align-self: flex-start
+        background-color: $lightColor
+        border: none
+        border-radius: 0.5em
+        line-height: 1.5em
+        padding: 0 1em 0 1em
+        color:$darkColor
+        font-family: Poppins, Arial, Helvetica, sans-serif
+
+.list-review
+    display: flex
+    flex-direction: column
+    padding: 0
+    gap: 0.75em
+    margin: 1em 0 0 0
+
+.item-list-review 
+    list-style: none
+
+.reviewName 
+    font-weight: bold
+    color: $lightColor
+    margin: 0
+
+.reviewDate 
+    font-weight: normal
+    color: #616161
+    margin: 0
+
+.reviewText 
+    color: $whiteColor
+    margin: 0.75em 0 0 0
+
+.like 
+    width: 55px
+    height: 55px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $pinkColor
+    position: fixed
+    bottom: 16px
+    right: 16px
+    border-radius: 50%
+    border: 0
+    font-size: 18px
+    color: $whiteColor
+    cursor: pointer
