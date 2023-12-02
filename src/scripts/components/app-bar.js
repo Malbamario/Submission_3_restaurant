@@ -9,9 +9,9 @@ class AppBar extends HTMLElement {
         <nav>
             <div class="title">
                 <picture>
-                  <source type="image/webp" srcset="./app-icon.webp">
-                  <source type="image/png" srcset="./app-icon.png">
-                  <img class="lazyload" src="./app-icon.png" alt="Malba Culinary Icon">
+                  <source type="image/webp" data-srcset="./app-icon.webp">
+                  <source type="image/png" data-srcset="./app-icon.png">
+                  <img class="lazyload" data-src="./app-icon.png" alt="Malba Culinary Icon">
                 </picture>
                 <h1>Malba Culinary</h1>
             </div>

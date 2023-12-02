@@ -17,9 +17,9 @@ class RestaurantItem extends HTMLElement {
     this.innerHTML = `
             <p class="kota">${this._data.city}</p>
             <picture>
-                <source media="(max-width: 567px)" srcset="${this._thumbnail.small}">
-                <source media="(min-width: 568px)" srcset="${this._thumbnail.medium}">
-                <img class="lazyload" src="${this._thumbnail.small}" alt="${this._data.name}">
+                <source media="(max-width: 567px)" data-srcset="${this._thumbnail.small}">
+                <source media="(min-width: 568px)" data-srcset="${this._thumbnail.medium}">
+                <img class="lazyload" data-src="${this._thumbnail.small}" alt="${this._data.name}">
             </picture>
             <div class="text">
                 <div class="star-outer"><div class="star-inner"></div></div>

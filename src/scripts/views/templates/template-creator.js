@@ -6,9 +6,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <h1>${restaurant.name}</h1>
     </div>
     <picture  id="restaurant-img">
-        <source media="(max-width: 567px)" srcset="${API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId)}">
-        <source media="(min-width: 568px)" srcset="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}">
-        <img class="lazyload detail-card" src="${API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId)}" alt="">
+        <source media="(max-width: 567px)" data-srcset="${API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId)}">
+        <source media="(min-width: 568px)" data-srcset="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}">
+        <img class="lazyload detail-card" data-src="${API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId)}" alt="">
     </picture>
     <div id="box3">
         <div class="detail-card">
