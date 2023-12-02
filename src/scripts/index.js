@@ -3,6 +3,7 @@ import App from './views/app';
 import swRegister from './utils/sw-register';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import '../styles/main.sass';
 import '../styles/responsive.sass';
 import './components/app-bar';
 import './components/hero';

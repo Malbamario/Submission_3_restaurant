@@ -16,7 +16,11 @@ class RestaurantItem extends HTMLElement {
     this.ariaLabel = `${this._data.name}, ${this._data.city}, with rating ${this._data.rating} per 5.`;
     this.innerHTML = `
             <p class="kota">${this._data.city}</p>
-            <img class="lazyload" src="${this._thumbnail}" alt="${this._data.name}">
+            <picture>
+                <source media="(max-width: 567px)" srcset="${this._thumbnail.small}">
+                <source media="(min-width: 568px)" srcset="${this._thumbnail.medium}">
+                <img class="lazyload" src="${this._thumbnail.small}" alt="${this._data.name}">
+            </picture>
             <div class="text">
                 <div class="star-outer"><div class="star-inner"></div></div>
                 <h2>${this._data.name}</h2>

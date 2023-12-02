@@ -11,7 +11,7 @@ const Detail = {
     const loadingSpinner = document.createElement('loading-spinner');
     likeButt.id = 'likeButtonContainer';
     container.id = 'container-detail';
-    container.className = 'container-detail wrapper';
+    container.className = 'wrapper';
     container.append(loadingSpinner);
     return [container, likeButt];
   },

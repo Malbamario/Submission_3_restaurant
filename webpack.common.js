@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -43,11 +42,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
-          globOptions: {
-            ignore: ['**/images/heros/**'],
-          },
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
         },
       ],
     }),
@@ -65,17 +61,6 @@ module.exports = {
           options: { cacheName: 'malba-restaurant-image-api' },
         },
       ],
-    }),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 50,
-          },
-        },
-      ],
-      overrideExtension: true,
     }),
     process.env.NODE_ENV === 'production' && new BundleAnalyzerPlugin({
       analyzerMode: 'static',

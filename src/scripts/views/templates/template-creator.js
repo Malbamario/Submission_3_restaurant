@@ -5,12 +5,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div id="restaurantName" id="box1">
         <h1>${restaurant.name}</h1>
     </div>
-    <picture>
-              <source type="image/webp" srcset="${this._thumbnail}">
-              <source type="image/jpeg" srcset="${this._thumbnail}">
-              <img class="lazyload" src="${this._thumbnail}" alt="${this._data.name}">
-            </picture>
-    <img class="lazyload" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}" alt="" id="restaurant-img" class="detail-card">
+    <picture  id="restaurant-img">
+        <source media="(max-width: 567px)" srcset="${API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId)}">
+        <source media="(min-width: 568px)" srcset="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}">
+        <img class="lazyload detail-card" src="${API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId)}" alt="">
+    </picture>
     <div id="box3">
         <div class="detail-card">
             <i class="fa fa-location-dot" aria-hidden="true"></i>
@@ -56,7 +55,10 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => {
   const item = document.createElement('restaurant-item');
   item.data = restaurant;
-  item.thumbnail = API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId);
+  item.thumbnail = {
+    small: API_ENDPOINT.IMAGE_SMALL(restaurant.pictureId),
+    medium: API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId),
+  };
   return item;
 };
 
